@@ -77,8 +77,8 @@ val DefaultFormatter = buildFormatter {
                             to.append(i.toChar())
                         else
                         {
-                            to.append(((i ushr 10) + (Char.MIN_HIGH_SURROGATE.toInt() - (0x010000 ushr 10))).toChar()) // high surrogate; 0x010000 - MIN_SUPPLEMENTARY_CODE_POINT
-                            to.append(((i and 0x3ff) + Char.MIN_LOW_SURROGATE.toInt()).toChar()) // low surrogate
+                            to.append(((i ushr 10) + (Char.MIN_HIGH_SURROGATE.code - (0x010000 ushr 10))).toChar()) // high surrogate; 0x010000 - MIN_SUPPLEMENTARY_CODE_POINT
+                            to.append(((i and 0x3ff) + Char.MIN_LOW_SURROGATE.code).toChar()) // low surrogate
                         }
                     }
                     else

@@ -36,7 +36,7 @@ class UppercaseConversion(private val baseConversion: Conversion) : Conversion
         override fun append(c: Char): Appendable
         {
             return to.apply {
-                append(c.toUpperCase())
+                append(c.uppercaseChar())
             }
         }
 
@@ -49,7 +49,7 @@ class UppercaseConversion(private val baseConversion: Conversion) : Conversion
                 {
                     for (ch in csq)
                     {
-                        append(ch.toUpperCase())
+                        append(ch.uppercaseChar())
                     }
                 }
             }
@@ -63,9 +63,9 @@ class UppercaseConversion(private val baseConversion: Conversion) : Conversion
                 if (start < 0 || start > end || end > s.length)
                     throw IndexOutOfBoundsException("start $start, end $end, s.length() ${s.length}")
 
-                for (i in start..(end - 1))
+                for (i in start..< end)
                 {
-                    append(s[i].toUpperCase())
+                    append(s[i].uppercaseChar())
                 }
             }
         }

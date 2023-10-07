@@ -78,7 +78,7 @@ class ConversionsScope internal constructor(val conversions: MutableConversionMa
             throw ConversionAlreadyExistsException(key, prev)
         conversions[key] = conversion
         if(uppercaseVariant)
-            put(key.withConversion(key.conversion.toUpperCase()), UppercaseConversion(conversion), false)
+            put(key.withConversion(key.conversion.uppercaseChar()), UppercaseConversion(conversion), false)
     }
 }
 
