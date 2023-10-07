@@ -1,12 +1,13 @@
 plugins {
     kotlin("multiplatform")
+    id("maven-publish")
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
     targetHierarchy.default()
     jvm()
-    js() {
+    js {
         browser { binaries.executable() }
         nodejs { binaries.executable() }
     }
