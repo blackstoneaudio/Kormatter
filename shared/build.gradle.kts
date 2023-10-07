@@ -3,7 +3,10 @@ plugins {
     id("maven-publish")
 }
 
-@OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
+group = "com.blackstone"
+version = "0.1.0"
+
+
 kotlin {
     targetHierarchy.default()
     jvm()
