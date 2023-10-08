@@ -9,3 +9,26 @@ modern Kotlin Multiplatform. Big thanks to the original creator [mrapplexz](http
 Kormatter is a multiplatform Kotlin interpreter for printf-style format strings 
 (like java.util.Formatter). Allows to do your favourite (or not so) String.format(...) in pure Kotlin ;).
 
+### How to Add Kormatter to Your Project
+
+```kotlin 
+repositories {
+    ... 
+    maven("https://repos.awhb.dev")
+    ...
+}
+```
+
+add following in your commonMain source set
+```kotlin
+sourceSets {
+  val commonMain by getting {
+    dependencies {
+      ...
+      implementation("com.blackstone:kormatter:0.1.0")
+        ...
+    }
+  }
+}
+  ...
+```

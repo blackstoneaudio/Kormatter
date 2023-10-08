@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Kormatter"
+rootProject.name = "kormatter"
 include(":shared")

@@ -47,3 +47,23 @@ kotlin {
 
     }
 }
+
+publishing {
+    // this fetches our credentials from ~/.gradle/gradle.properties
+    val mavenUser: String by project
+    val mavenPassword: String by project
+
+    repositories {
+        maven {
+            name = "reposiliteRepositoryReleases"
+            setUrl("https://repos.awhb.dev/releases")
+            authentication {
+                create("basic", BasicAuthentication::class.java)
+            }
+            credentials {
+                username = mavenUser
+                password = mavenPassword
+            }
+        }
+    }
+}
