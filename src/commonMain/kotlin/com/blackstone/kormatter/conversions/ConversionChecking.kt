@@ -12,7 +12,6 @@ import com.blackstone.kormatter.FLAG_REUSE_ARGUMENT
 import com.blackstone.kormatter.FlagMismatchException
 import com.blackstone.kormatter.PrecisionMismatchException
 import com.blackstone.kormatter.WidthMismatchException
-import com.blackstone.kormatter.conversions.Conversion
 import com.blackstone.kormatter.utils.FormatString
 import com.blackstone.kormatter.utils.PartAction
 
