@@ -14,7 +14,7 @@ Kormatter is a multiplatform Kotlin interpreter for printf-style format strings
 ```kotlin 
 repositories {
     ... 
-    maven("https://repos.awhb.dev")
+    maven("https://repos.awhb.dev/releases")
     ...
 }
 ```
